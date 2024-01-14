@@ -148,5 +148,10 @@ export const canvasDetails = [
 
 export const canvasElementType = {
   text: 0,
-  circle: 1
+  circle: 1,
+  rectangle: 2,
+  line: 3,
+  square: 4,
+  triangle: 5,
+  pentagon: 6
 };

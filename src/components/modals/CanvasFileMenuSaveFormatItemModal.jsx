@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 function CanvasFileMenuSaveFormatItemModal() {
   const dispatch = useDispatch();
   const canvasData = useSelector((state) => state.persist.canvasReducer.selectedCanvas);
+  // console.log(canvasData)
 
   // Function to handle save button click
   const handleSaveClick = (format) => {

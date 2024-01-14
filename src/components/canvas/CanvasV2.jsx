@@ -10,6 +10,11 @@ import {
 import { CanvasText } from '..';
 import { canvasElementType } from '../../utils/constants';
 import CanvasCircle from './CanvasCircle';
+import Line from '../shapes/Line';
+import Square from '../shapes/Square';
+import { retry } from '@reduxjs/toolkit/query';
+import Triangle from '../shapes/Triangle';
+import Pentagon from '../shapes/Pentagon';
 
 function CanvasV2({ width, height }) {
   // ------------------------------------------------------------------------------
@@ -190,6 +195,18 @@ function CanvasV2({ width, height }) {
               return <CanvasText key={element.id} element={element} />;
             } else if (element.type == canvasElementType.circle) {
               return <CanvasCircle key={element.id} element={element} />;
+            } 
+            else if (element.type == canvasElementType.line) {
+              return <Line key={element.id} element={element} />;
+            }
+            else if (element.type == canvasElementType.square) {
+              return<Square key={element.id} element={element} />;
+            }
+            else if (element.type == canvasElementType.triangle) {
+              return <Triangle key={element.id} element={element} />;
+            }
+            else if (element.type == canvasElementType.pentagon) {
+              < Pentagon key={element.id} element={element} />;
             }
           })}
           {/* circle */}
